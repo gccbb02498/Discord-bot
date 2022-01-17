@@ -7,8 +7,8 @@ import json
 
 class Commons(Cog_Extension):
     @commands.command(pass_context=True)
-    async def clear(slef, ctx, num: int):
-        await ctx.channel.delete(limit=num+1)
+    async def clean(slef, ctx, num: int):
+        await ctx.channel.purge(limit=num+1)
 
 
 def setup(bot):

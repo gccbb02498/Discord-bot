@@ -23,11 +23,15 @@ class main(Cog_Extension):
 
         print(message.author, message.content)
         if message.content == '我好帥喔':
-            
+
+            await message.delete()
+
+            await message.channel.send('不好意思，不要騙人啦')
+        elif message.content.find('唱歌') != -1:
+
             await message.delete()
             
-            await message.channel.send('不好意思，不要騙人啦')
-
+            await message.channel.send('蝦咪，有人提到唱歌嗎，不好意思，我先刪除了')
         elif message.content.startswith('不可以色色'):
             if "可以色色" and "不可以色色" in self.table:
                 self.table = []
